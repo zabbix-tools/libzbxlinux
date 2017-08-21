@@ -23,9 +23,7 @@
 static ZBX_METRIC keys[] =
 /*      KEY                         FLAG            FUNCTION                        TEST PARAMETERS */
 {
-    {"system.ksm",                  CF_HAVEPARAMS,  SYSTEM_KSM,                     NULL},
-    
-    // Null terminator
+    {"linux.ksm",                  CF_HAVEPARAMS,  LINUX_KSM,                      NULL},
     {NULL}
 };
 
@@ -35,8 +33,7 @@ void        zbx_module_item_timeout(int timeout)    { return; }
 ZBX_METRIC  *zbx_module_item_list()                 { return keys; }
 int         zbx_module_uninit()                     { return ZBX_MODULE_OK; }
 
-int         zbx_module_init() { 
-    // log version on startup
+int         zbx_module_init() {
     zabbix_log(LOG_LEVEL_INFORMATION, "Starting agent module %s", PACKAGE_STRING);
-    return ZBX_MODULE_OK; 
+    return ZBX_MODULE_OK;
 }

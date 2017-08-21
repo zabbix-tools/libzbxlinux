@@ -20,6 +20,9 @@
 #ifndef LIBZBXLINUX_H
 #define LIBZBXLINUX_H
 
+// fix
+#define HAVE_TIME_H	1
+
 #include <stdio.h>
 #include <errno.h>
 
@@ -30,6 +33,8 @@
 #include <log.h>
 #include <zbxjson.h>
 
-int     SYSTEM_KSM(AGENT_REQUEST *request, AGENT_RESULT *result);
+typedef unsigned long long int uint64;
+
+int LINUX_KSM(AGENT_REQUEST *request, AGENT_RESULT *result);
 
 #endif // LIBZBXLINUX_H

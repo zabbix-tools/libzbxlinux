@@ -19,7 +19,8 @@ fi
 
 # output
 AC_CONFIG_FILES([
- Makefile
+ conf/Makefile
  src/Makefile
+ Makefile
 ])
 AC_OUTPUT
