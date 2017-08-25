@@ -3,6 +3,7 @@ lib_LTLIBRARIES = libzbxlinux.la
 libzbxlinux_la_SOURCES = \
 	libzbxlinux.h \
 	libzbxlinux.c \
+	fs.c \
 	ksm.c
 
 libzbxlinux_la_CFLAGS = \

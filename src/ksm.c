@@ -43,9 +43,9 @@ int LINUX_KSM(AGENT_REQUEST *request, AGENT_RESULT *result)
     };
 
     int         ret = SYSINFO_RET_FAIL;
-    FILE        *f = NULL;
     const char  *metric = NULL, *c = NULL;
     char        path[64];
+    FILE        *f = NULL;
     uint64      val = 0;
 
     if(1 != request->nparam) {

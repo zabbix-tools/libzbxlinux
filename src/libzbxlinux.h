@@ -33,8 +33,13 @@
 #include <log.h>
 #include <zbxjson.h>
 
+#ifndef PATH_MAX
+#define PATH_MAX 4096
+#endif
+
 typedef unsigned long long int uint64;
 
 int LINUX_KSM(AGENT_REQUEST *request, AGENT_RESULT *result);
+int LINUX_FS_FILENR(AGENT_REQUEST *request, AGENT_RESULT *result);
 
 #endif // LIBZBXLINUX_H

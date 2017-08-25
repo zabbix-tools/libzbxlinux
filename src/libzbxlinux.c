@@ -19,15 +19,13 @@
 
 #include "libzbxlinux.h"
 
-// Define custom keys
 static ZBX_METRIC keys[] =
-/*      KEY                         FLAG            FUNCTION                        TEST PARAMETERS */
 {
-    {"linux.ksm",                  CF_HAVEPARAMS,  LINUX_KSM,                      NULL},
+    {"linux.ksm",           CF_HAVEPARAMS,  LINUX_KSM,          NULL},
+    {"linux.fs.file-nr",    CF_HAVEPARAMS,  LINUX_FS_FILENR,    NULL},
     {NULL}
 };
 
-// Required Zabbix module functions
 int         zbx_module_api_version()                { return ZBX_MODULE_API_VERSION_ONE; }
 void        zbx_module_item_timeout(int timeout)    { return; }
 ZBX_METRIC  *zbx_module_item_list()                 { return keys; }
