@@ -15,8 +15,10 @@ libzbxlinux_la_LDFLAGS = \
 
 # Prevent install of the redundant *.la files
 install-exec-hook:
-	rm -f $(DESTDIR)$(libdir)/libzbxlinux.la
+	$(RM) $(DESTDIR)$(libdir)/libzbxlinux.la
+	$(MKDIR_P) $(DESTDIR)/$(libdir)/zabbix/modules
+	mv $(DESTDIR)$(libdir)/libzbxlinux.so $(DESTDIR)$(libdir)/zabbix/modules/libzbxlinux.so
 
 # Fix "files left after uninstall" issue
 uninstall-local:
-	rm -f $(DESTDIR)$(libdir)/libzbxlinux.so
+	$(RM) $(DESTDIR)$(libdir)/libzbxlinux.so

@@ -31,7 +31,7 @@ int LINUX_FS_FILENR(AGENT_REQUEST *request, AGENT_RESULT *result)
 	int ret = SYSINFO_RET_FAIL;
 	const char *metrics[] = { "allocated", "free", "max", NULL };
 	char *metric = NULL;
-	int i = 0;
+	int i = 0; // "allocated"
 	FILE *f = NULL;
 	uint64 val[3];
 
